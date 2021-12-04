@@ -17,12 +17,12 @@
 2. [Pricing](#pricing)
 3. [Setup](#setup)
 4. [EC2 Linux](#ec2_linux)  
-5. [Excercise](#excercise)
+5. [Exercise](#exercise)
 
 <a name="terminology"/>
 
 ## Terminology
- 
+  
 - Instances : Virtual Computing environments - Compare it to Virtual machines
 - AMIs (Amazon Machine Images) : Images used to boot the virtual machines - Compare to snapshots or ova files
 - Instance types : Configuration of CPUs, compare to flavours
@@ -76,6 +76,26 @@ EC2 has the following purchase options
    - Reserved Instances that applied to terminated instances are billed until the end of their term according to their payment option.
    
 
+### Operations
+ - Launch  - When instance is launched it enters the _pending_ state
+ - Stop and Start (EBS Backed instances only)
+   - If instance fails check, or it is not responding, the instance can be _stopped_
+   - Instance enters _stopping_ state and then _stopped_
+   - You can modify instance settings in the _stopped_ state
+   - When you start the instance it goes into the _pending_ state
+   - The instance is moved to a new host computer
+   - Instance retains it private IPv4 address
+ - Hibernate (EBS Backed instances only)
+   - Hibernate action signals OS to suspend to disk
+   - It enters into the _stopping_ and then _stopped_ state
+   - The instance is moved to a new host computer
+   - Instance retains it private IPv4 address
+ - Reboot
+   - Recommended rebooting using the EC2 rather than system command
+   - Rebooting an instance is equivalent to rebooting an operating system. 
+ - Retirement
+   - An instance is scheduled to be retired when AWS detects the irreparable failure of the underlying hardware hosting the instance
+   - When an instance reaches its scheduled retirement date, it is stopped or terminated by AWS. 
 
 ![EC2 Instance lifecycle - src AWS Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/images/instance_lifecycle.png)
 
@@ -105,6 +125,18 @@ EC2 has the following purchase options
   - TTL should always be set to 255, there are chances it may expire for lower values
   
 
-<a name="excercise"/>
+<a name="exercise"/>
 
-## Excercise
+## Exercise
+
+
+ - Manage software on your Amazon Linux instance 
+ - Manage user accounts on your Amazon Linux instance 
+ - Processor state control for your EC2 instance 
+ - I/O scheduler 
+ - Set the time for your Linux instance 
+ - Optimize CPU options 
+ - Change the hostname of your Amazon Linux instance 
+ - Set up dynamic DNS on Your Amazon Linux instance 
+ - Run commands on your Linux instance at launch 
+ - Instance metadata and user data
