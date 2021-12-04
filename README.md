@@ -12,6 +12,7 @@ AWS Certified Solutions Architect - Associate Notes
       1. [Amazon Machine Images](EC2/ami.md)
       2. [EC2 Instance Types](EC2/instance_types.md)
       3. [EC2 Fleet](EC2/fleet.md)
+      4. [Networking](EC2/networking.md)
 
 
 
