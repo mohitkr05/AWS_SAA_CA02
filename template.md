@@ -19,7 +19,15 @@
 
 # Terminology
 
+
+
+<a name="details"/>
+
+# Details
+ 
+
 <a name="pricing"/>
+
 
 # Pricing
  
