@@ -17,7 +17,7 @@
 2. [Pricing](#pricing)
 3. [Setup](#setup)
 4. [EC2 Linux](#ec2_linux)  
-5. [Excercises](#excercises)
+5. [Excercise](#excercise)
 
 <a name="terminology"/>
 
@@ -45,6 +45,8 @@ EC2 has the following purchase options
 - Savings Plan : Long term based usage - 1 to 3 years, reduces the cost
 - Reserved Instances : Reserve a specific virtual machine in a region - 1 to 3 years
 - Spot Instances : Request unused EC2 instances
+- Dedicated hosts : Pay for a physical host that is fully dedicated to running your instances, and bring your existing per-socket, per-core, or per-VM software licenses to reduce costs. 
+- Capacity Reservations – Reserve capacity for your EC2 instances in a specific Availability Zone for any duration
 
 <a name="setup"/>
 
@@ -62,6 +64,20 @@ EC2 has the following purchase options
 
 ![EC2 getting started (src AWS DOCS)](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/images/overview_getting_started.png)
 
+
+## Instance Lifecycle
+
+ - pending - The instance is preparing to enter the running state. An instance enters the pending state when it launches for the first time, or when it is started after being in the stopped state.  - No billing
+ - running - The instance is running and ready for use - Not billed
+ - stopping - The instance is preparing to be stopped or stop-hibernated. - Billed if preparing to hibernate
+ - stopped - The instance is shut down and cannot be used. The instance can be started at any time.  - Not billed
+ - shutting down- The instance is preparing to be terminated. - Not billed
+ - terminated The instance has been permanently deleted and cannot be started. - Not billed
+   - Reserved Instances that applied to terminated instances are billed until the end of their term according to their payment option.
+   
+
+
+![EC2 Instance lifecycle - src AWS Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/images/instance_lifecycle.png)
 
 <a name="best_practices"/>
 
@@ -89,6 +105,6 @@ EC2 has the following purchase options
   - TTL should always be set to 255, there are chances it may expire for lower values
   
 
-<a name="excercises"/>
+<a name="excercise"/>
 
-## Excercises
+## Excercise
